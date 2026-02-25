@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   background-image: url("../img/wall.png");
   background-size: cover;     
@@ -7,7 +13,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+}
+
+.titolo {
+font-size: 60px;
 }
 
 main {
@@ -15,11 +24,38 @@ main {
   background-size: cover;     
   background-position: center;  
   background-repeat: no-repeat; 
-  height: 100vh;                
+  min-height: 100vh;
+  min-width: 200vh;                
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
+.card {
+    width: 620px;
+    border: 20px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    margin: 50px auto;
+    background: #fff;
+  }
+
+  .card img.main-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+  }
+
+  
+  .card img.top-icon {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
