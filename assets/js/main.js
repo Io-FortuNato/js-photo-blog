@@ -1,15 +1,15 @@
 
- const row = document.getElementById("row-cards");
+const row = document.getElementById("row-cards");
 
 fetch("https://lanciweb.github.io/demo/api/pictures/")
   .then(res => res.json())
   .then(data => {
 
-   
-    data.slice(0, 6).forEach((event, index) => {  
+
+    data.slice(0, 6).forEach((event, index) => {
 
       const col = document.createElement("div");
-      col.className = "col-12 col-md-6 col-lg-4 mb-4"; 
+      col.className = "col-12 col-md-6 col-lg-4 mb-4";
 
       col.innerHTML = `
         <div class="card">
@@ -27,3 +27,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
   })
   .catch(error => console.error(error));
+
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+const closeBtn = document.getElementById("close-overlay");
