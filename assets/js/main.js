@@ -1,5 +1,8 @@
 
 const row = document.getElementById("row-cards");
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+const closeBtn = document.getElementById("close-overlay");
 
 fetch("https://lanciweb.github.io/demo/api/pictures/")
   .then(res => res.json())
@@ -28,6 +31,13 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
   })
   .catch(error => console.error(error));
 
-const overlay = document.getElementById("overlay");
-const overlayImg = document.getElementById("overlay-img");
-const closeBtn = document.getElementById("close-overlay");
+
+document.getElementById("row-cards").addEventListener("click", (e) => {
+  const card = e.target.closest(".card");
+  if (!card) return;
+
+  const imgSrc = card.querySelector("img.img-fluid").src;
+  overlayImg.src = imgSrc;
+
+  overlay.classList.remove("hidden");
+});
