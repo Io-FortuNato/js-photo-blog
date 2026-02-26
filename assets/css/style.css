@@ -18,7 +18,7 @@ header {
 .titolo {
   font-family: "Edu TAS Beginner", cursive;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: bold;
   font-style: normal;
   font-size: 90px;
 }
@@ -71,5 +71,9 @@ main {
 
 .card h3 {
   text-transform: uppercase;
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 
