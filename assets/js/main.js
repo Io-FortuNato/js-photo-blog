@@ -41,3 +41,7 @@ document.getElementById("row-cards").addEventListener("click", (e) => {
 
   overlay.classList.remove("hidden");
 });
+
+closeBtn.addEventListener("click", () => {
+  overlay.classList.add("hidden"); 
+});
